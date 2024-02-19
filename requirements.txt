@@ -1,11 +1,14 @@
-numpy
-pandas
-python-dotenv
+numpy~=1.26.4
+pandas~=2.2.0
+python-dotenv~=1.0.1
 mysql-connector-python
-pymysql
-scikit-learn
+pymysql~=1.1.0
+scikit-learn~=1.4.0
 seaborn
 catboost
-xgboost
+xgboost~=2.0.3
 mlflow
+dill 
+pickle
 #-e .
+cloudpickle~=3.0.0

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            background-image: url("one.jpg");
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           z-index: -1;
+           opacity: .9;
+        }
+
+        .form {
+            font-size: x-large;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            object-fit: cover;
+            width: 100%;
+            max-width: 700vw;
+            ;
+        }
+
+        .inputItem {
+            display: flex;
+            margin: 5px 0px;
+            padding: 1rem;
+          
+            border-radius: 10px;
+            justify-content: space-between;
+        }
+
+        .value {
+            display: flex;
+            background-color: black;
+            gap: 10px;
+            font-size: medium;
+            color: white;
+
+        }
+
+        label {
+            color: white;
+        }
+
+        input {
+            background-color: black;
+        }
+
+        .btncontainer {
+            display: flex;
+            justify-content: space-around;
+        }
+        h1{
+            text-align: center;
+            color: rgb(151, 180, 35);
+        }
+        .btn {
+            width: 100%;
+            max-width: 200px;
+            height: 35px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(34, 111, 198);
+
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+    </div>
+    <h1>Lung Cancer Detection</h1>
+    <form class="form">
+        
+        <div class="container">
+            <div class="inputItem">
+                <label>Gender</label>
+                <div class="value">
+                    <div style="display: flex; ">
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="Male" />
+                    </div>
+                    <div style="display: flex;">
+
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="Female" />
+                    </div>
+                    <div style="display: flex;">
+
+                        <label for="others">Others</label>
+                        <input type="radio" id="others" name="gender" value="others" />
+                    </div>
+                </div>
+            </div>
+            <div class="inputItem">
+                <label for="age">Age</label>
+                <div class="value">
+                    <input style="color: white;"  type="number" id="age" />
+                </div>
+            </div>
+            <div class="inputItem">
+                <label for="smoking">Smoking</label>
+                <select class="value">
+                    <option class="first" value=1>Yes</option>
+                    <option class="first" value=1>No</option>
+                </select>
+            </div>
+            <div class="inputItem">
+                <label for="yellow_finger">Yellow Fingers</label>
+                <select class="value">
+                    <option class="first" value=1>Yes</option>
+                    <option class="first" value=0>No</option>
+                </select>
+            </div>
+            <div class="inputItem">
+                <label for="anxity">Anxity</label>
+                <select class="value">
+                    <option class="first" value=1>Yes</option>
+                    <option class="first" value=0>No</option>
+                </select>
+            </div>
+            <div class="inputItem">
+                <label for="peer_pressure">Peer Pressure</label>
+                <select class="value">
+                    <option class="first" value=1>Yes</option>
+                    <option class="first" value=0>No</option>
+                </select>
+            </div>
+            <div class="inputItem">
+                <label>Chronic Disease</label>
+                <div class="value">
+                    <div style="display: flex; ">
+                        <label for="chronic_yes">Yes</label>
+                        <input type="radio" id="chronic_yes" name="chronic" value=1 />
+                    </div>
+                    <div style="display: flex; ">
+
+                        <label for="chronic_no" >No</label>
+                        <input type="radio" id="chronic_no" name="chronic" value=0 />
+                    </div>
+                </div>
+            </div>
+            <div class="inputItem">
+                <label>Fatigue</label>
+                <select class="value">
+                    <option class="first" value=1>Yes</option>
+                    <option class="first" value=0>No</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="inputItem">
+                <label>Allergy</label>
+                <select class="value">
+                    <option class="first" value=1>Yes</option>
+                    <option class="first" value=0>No</option>
+                </select>
+            </div>
+            <div class="inputItem">
+                <label>Wheezing</label>
+                <div class="value">
+                    <div style="display: flex; ">
+                        <label for="wheezing_yes">Yes</label>
+                        <input type="radio" id="wheezing_yes" name="wheezing" value=1 />
+                    </div>
+                    <div style="display: flex;">
+
+                        <label for="wheezing_no">No</label>
+                        <input type="radio" id="wheezing_no" name="wheezing" value=0 />
+                    </div>
+                </div>
+            </div>
+            <div class="inputItem">
+                <label>Alchole Consumption</label>
+                <div class="value">
+                    <div style="display: flex; ">
+
+                        <label for="alchole_yes">Yes</label>
+                        <input type="radio" id="alchole_yes" name="alchole" value=1 />
+                    </div>
+                    <div style="display: flex;">
+
+                        <label for="alchole_no">No</label>
+                        <input type="radio" id="alchole_no" name="alchole" value=0 />
+                    </div>
+                </div>
+            </div>
+            <div class="inputItem">
+                <label>Cough</label>
+                <select class="value">
+                    <option class="first" value=1>Yes</option>
+                    <option class="first" value=0>No</option>
+                </select>
+            </div>
+            <div class="inputItem">
+                <label>Breath Shortness</label>
+                <div class="value">
+                    <div style="display: flex; ">
+                        <label for="breath_yes">Yes</label>
+                        <input type="radio" id="breath_yes" name="breath" value=1 />
+                    </div>
+                    <div style="display: flex;">
+
+                        <label for="breath_no">No</label>
+                        <input type="radio" id="breath_no" name="breath" value="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="inputItem">
+                <label>Swalloing Problem</label>
+                <div class="value">
+                    <div style="display: flex;">
+                        <label for="swalloing_yes">Yes</label>
+                        <input type="radio" id="swalloing_yes" name="swalloing" value=1 />
+                    </div>
+                    <div style="display: flex; ">
+
+                        <label for="swalloing_no">No</label>
+                        <input type="radio" id="swalloing_no" name="swalloing" value=0 />
+                    </div>
+                </div>
+            </div>
+            <div class="inputItem">
+                <label>Chest Pain</label>
+                <select class="value">
+                    <option class="first" value=1>Yes</option>
+                    <option class="first" value=0>No</option>
+                </select>
+            </div>
+
+        </div>
+
+    </form>
+    <div class="btncontainer">
+        <button class="btn">Submit</button>
+        <h2>Result:</h2>
+    </div>
+
+</body>
+
+</html>
